@@ -22,24 +22,24 @@ window.onload = function() {
     let sound;
 
     buttons.forEach(button => {
-        // button.addEventListener('click', () => {
-        //     const sound = new Audio(`sounds/${button.innerText}.mp3`);
-        //     sounds.push(sound);
-        //     sound.play();
-        // });
-		button.addEventListener('click', () => {
+        button.addEventListener('click', () => {
             if (sound) {
                 sound.pause();
                 sound.currentTime = 0;
+                sound.remove();  
             }
-            sound = new Audio(`sounds/${button.innerText}.mp3`);
+            sound = document.createElement('audio');
+            sound.src = `sounds/${button.innerText}.mp3`;
+            document.body.appendChild(sound); 
             sound.play();
         });
     });
-	stopButton.addEventListener('click', () => {
+
+    stopButton.addEventListener('click', () => {
         if (sound) {
             sound.pause();
             sound.currentTime = 0;
         }
     });
+};
 };
