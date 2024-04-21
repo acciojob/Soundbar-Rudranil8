@@ -29,7 +29,7 @@ window.onload = function() {
                 sound.remove();  
             }
             sound = document.createElement('audio');
-            sound.src = `sounds/${https://pixabay.com/music/beats-no-copyright-for-her-chill-upbeat-summel-travel-vlog-and-ig-music-202298/}.mp3`;
+            sound.src = `https://pixabay.com/music/beats-no-copyright-for-her-chill-upbeat-summel-travel-vlog-and-ig-music-202298/`;
             document.body.appendChild(sound); 
             sound.play();
         });
